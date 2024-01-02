@@ -1,0 +1,123 @@
+
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+body {
+  background: #1ED760;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  padding-bottom: 20px;
+  margin-top: 30px;
+}
+
+.wrapper {
+  height: 100vh;
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
+}
+
+.typing-demo {
+  width: 22ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 1.5em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+
+.card {
+  background: #fdfdfd;
+  border-radius: 4px;
+  margin-top: 20px;
+  height: 100vh;
+  width: 80vw;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  overflow: hidden;
+}
+
+.card2 {
+  background: #fdfdfd;
+  border-radius: 4px;
+  margin-top: 20px;
+  height: 185vh;
+  width: 80vw;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.iframe {
+  width: 100%; /* Tamanho para mobile */
+  height: 200px; /* Ajuste conforme necessário */
+}
+
+.text {
+  font-size: 16px;
+  padding: 1em;
+  margin-top: 2em; /* Ajuste o espaçamento superior conforme necessário */
+}
+
+@media only screen and (min-width: 1000px), only screen and (max-height: 640px) {
+  .card {
+    flex-direction: row-reverse;
+  }
+  .card img.birthday {
+    width: 100%;
+    max-width: 50vw; /* Ajuste conforme necessário */
+    max-height: unset;
+  }
+  .card2 {
+    height: 150vh;
+  }
+
+
+  .text {
+    
+  }
+
+  .iframe {
+    width: 560px; /* Tamanho para desktop */
+    height: 315px;
+  }
+}
+
+
+img.birthday {
+  max-height: 40vh;
+}
+
+.text {
+  padding: 1em;
+}
+
+.muted {
+  opacity: 0.8;
+  }
+
+.space {
+  height: 100px;
+}
